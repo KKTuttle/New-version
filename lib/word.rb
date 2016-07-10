@@ -17,4 +17,8 @@ class Word
   define_singleton_method(:clear) do
     @@words = []
   end
+  define_method(:add_definition) do |definition|
+    @definitions.push(definition)
+  end
+  
 end
