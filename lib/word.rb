@@ -18,7 +18,8 @@ class Word
     @@words = []
   end
   define_method(:add_definition) do |definition|
-    @definitions.push(definition)
+    new_defin =Definition.new({:definition => definition})
+    @definitions.push(new_defin)
   end
 
   define_singleton_method(:find) do |id|
