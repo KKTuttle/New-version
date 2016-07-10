@@ -37,13 +37,22 @@ describe(Word) do
   end
 
   describe("#add_definition") do
-   it "adds a definition to the word" do
-     test_word = Word.new({:word => 'Stock'})
-     test_definition = Definition.new({:definition => "A stock is a type of security that signifies ownership in a corporation and represents a claim on part of the corporation's assets and earnings."})
-     test_word.add_definition(test_definition)
-     expect(test_word.definitions).to(eq([test_definition]))
-   end
- end
+    it "adds a definition to the word" do
+      test_word = Word.new({:word => 'Stock'})
+      test_definition = Definition.new({:definition => "A  stock is a type of security that signifies ownership in a corporation and represents a claim on part of the corporation's assets and earnings."})
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions).to(eq([test_definition]))
+    end
+  end
+  describe(".find") do
+    it("looks up and returns a word if it exists") do
+      test_word = Word.new({:word => "Hello"})
+      test_word.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
+
+
 
 
 end
