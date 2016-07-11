@@ -11,14 +11,17 @@ class Word
   define_singleton_method(:all) do
     @@words
   end
+
   define_method(:save) do
     @@words.push(self)
   end
+
   define_singleton_method(:clear) do
     @@words = []
   end
+
   define_method(:add_definition) do |definition|
-    new_defin =Definition.new({:definition => definition})
+    new_defin = Definition.new({:definition => definition})
     @definitions.push(new_defin)
   end
 
