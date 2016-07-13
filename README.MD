@@ -1,6 +1,6 @@
 # _Dictionary_
 
-#### _Dictionary, July 7tt, 2016_
+#### _Dictionary, July 7th, 2016_
 
 #### By _**Katarina Tuttle**_
 
