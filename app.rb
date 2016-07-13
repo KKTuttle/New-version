@@ -24,10 +24,8 @@ end
 
 post '/word/:id' do
   word = Word.find(params['id'].to_i)
-
-  word.add_definition(params.fetch('defin'))
-  # new_defin = Definition.new({:definition => })
-
+  new_defin = Definition.new({:definition => params.fetch('defin')})
+  word.add_definition(new_defin)
   @word = word
   erb(:word_definition)
 end
